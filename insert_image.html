@@ -1,0 +1,26 @@
+<html>
+
+  <input id = "1" type="file" name="photo" accept="/home/admin1/Pictures/">
+  <input type="button" onclick="send()" name="Done" value="Done">*Must be present in Pictures</button><br><br>
+<br>
+<br>
+<br>
+<a href="http://localhost/Displayi.php" target="_blank" name="Display" value="Display">see the uploaded image</input>
+  <div id="2"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script>
+function send()
+{
+	var var1 = document.getElementById("1").value;
+	var1 = "http://localhost/Images/" + var1;
+	$("#2").load("http://localhost/insert_image.php?photo="+var1);
+}
+
+</script>
+</html>
+
+
+
+
